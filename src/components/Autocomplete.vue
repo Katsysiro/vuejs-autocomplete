@@ -232,6 +232,8 @@ export default {
      * Search wrapper method
      */
     search () {
+		this.$emit('afterSearch', this.display)
+	
       this.selectedIndex = null
       switch (true) {
         case typeof this.source === 'string':
